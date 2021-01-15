@@ -1,0 +1,7 @@
+Do you encounter any problems? Does it matter what OS you're developing your code on? 
+
+Yes. When I run the code with the first two text files, the numbers display correctly.
+However, when I cout the third text file, none of the numbers show. Using the "od -a textfileX.txt" 
+command shows that the files are very different. Although the numbers in the text is the same,
+the formatting and hex code varies significatly. On another note, the problems are the same on
+both Linux and Windows.

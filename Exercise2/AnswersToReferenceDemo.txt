@@ -1,0 +1,28 @@
+Why doesn't it compile?
+
+Line 55 is a reference int. However, it is not initialized. Reference data types need to be initialized when declaring.
+
+What is happening when onePlus() is called? In other words, what exactly does the function receive as an argument? 
+
+The function receives a copy of whatever integer is passed in. 
+
+Why isn't the value of the variable in main() altered?
+
+The function increments the copy of the variable. It does not change the variable that was passed in. In order to do so,
+you need to make it a reference variable.
+
+Conversely, consider the call to refIncrement(). What is the argument here and why is the value of the variable in main()
+changed?
+
+It is different because the argument passed in is the reference of the variable. Therefore, any changes to the value will
+change the variables reference data and change the original value.
+
+Next, consider a call to value(). What does the function receive as an argument? What is the meaning of const in this 
+context?
+
+The function receives a constant reference string. Therefore, the function cannot change the value of the string.
+
+What does value() return? How can it be legal and what does it mean to apply the ++operator to its return value?
+
+value() returns an integer. It is getting the integer from the Pair struct. You cannot ++ the return because 
+&int means it's returning a named variable or lvalue. It cannot return a regular integer.
